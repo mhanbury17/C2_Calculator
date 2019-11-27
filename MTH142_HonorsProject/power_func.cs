@@ -56,7 +56,8 @@ namespace MTH142_HonorsProject
             (sender as TextBox).Width = size.Width;
             (sender as TextBox).Height = size.Height;
 
-            power.Location = new Point(value.Width+3, power.Location.Y);
+            power.Location = new Point(value.Width + 13, power.Location.Y);
+            right_par.Location = new Point(value.Width - 13, right_par.Location.Y);
 
             if ((sender as TextBox).Text == null || (sender as TextBox).Text == "")
             {
@@ -67,7 +68,7 @@ namespace MTH142_HonorsProject
                 (sender as TextBox).BackColor = Color.White;
             }
 
-            this.Width = power.Width + value.Width + 3;
+            this.Width = power.Width + value.Width + (2*(right_par.Width));
         }
     }
 }
